@@ -1,0 +1,218 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.task-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input input, .task-input select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.task-input input:focus, .task-input select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.task-input button {
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.task-input button:hover {
+    background: #0056b3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.filter {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter button {
+    padding: 10px 20px;
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.filter button:hover {
+    background: #5a6268;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+
+li .task-details {
+    margin-bottom: 20px; 
+    font-size: 16px;
+    text-align: center;
+}
+
+
+li div {
+    display: flex;
+    gap: 10px;
+    justify-content: center; 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+li div button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+li div button:nth-child(1) {
+    background-color: #28a745;
+}
+
+li div button:nth-child(1):hover {
+    background-color: #218838;
+}
+
+li div button:nth-child(2) {
+    background-color: #ffc107;
+}
+
+li div button:nth-child(2):hover {
+    background-color: #e0a800;
+}
+
+li div button:nth-child(3) {
+    background-color: #dc3545;
+}
+
+li div button:nth-child(3):hover {
+    background-color: #c82333;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    .filter {
+        flex-direction: column;
+    }
+
+    li div {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .task-input input, .task-input select, .task-input button {
+        font-size: 14px;
+    }
+
+    .filter button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    li {
+        padding: 12px;
+    }
+}
+
+
+input[type="date"] {
+    font-family: inherit;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input[type="date"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
